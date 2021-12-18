@@ -1,0 +1,1 @@
+{ ID = NUM ; while ( ID < NUM ) { ID = ID + NUM ; } ID = NUM ; if ( ID < NUM ) then { ID = NUM ; } else { ID = NUM ; } }

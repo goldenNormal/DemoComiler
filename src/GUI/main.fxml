@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:controller="GUI.FXMLController"  stylesheets="@main.css" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.14035087719298245" orientation="VERTICAL" prefHeight="600.0" prefWidth="1000.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="24.0" prefWidth="998.0">
+               <children>
+                  <Button onAction="#handleLexicalButtonAction" layoutX="140.0" layoutY="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" text="词法分析" />
+                  <Button onAction="#handleParseButtonAction" layoutX="340.0" layoutY="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" text="语法分析" />
+                  <Button onAction="#handleGrammerTreeButtonAction" layoutX="540.0" layoutY="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" text="语法树构建" />
+                  <Button onAction="#handleCodeGenarateButtonAction" layoutX="740.0" layoutY="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" text="打印符号表" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="537.0" prefWidth="998.0">
+               <children>
+                  <Button onAction="#handleUploadFileButtonAction"  layoutX="575.0" layoutY="474.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" text="浏览" />
+
+                  <SplitPane dividerPositions="0.501002004008016" prefHeight="466.0" prefWidth="1000.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TextArea fx:id="inputArea" layoutY="41.0" prefHeight="423.0" prefWidth="496.0" />
+                              <Label layoutX="23.0" layoutY="14.0" prefHeight="20.0" prefWidth="115.0" text="源代码输入" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TextArea fx:id="outputArea" layoutY="41.0" prefHeight="423.0" prefWidth="496.0"  />
+                              <Label layoutX="28.0" layoutY="14.0" prefHeight="20.0" prefWidth="115.0" text="执行结果" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+                  <TextField layoutX="57.0" layoutY="474.0" prefHeight="30.0" prefWidth="447.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</VBox>
+
